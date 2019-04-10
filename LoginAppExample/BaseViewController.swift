@@ -32,7 +32,7 @@ class BaseViewController: UIViewController {
     
     func removeUserData() {
         PokeManager.shared.deleteAll()
-        let removeSuccessful: Bool = KeychainWrapper.standard.remove(key: "myKey")
+        let removeSuccessful: Bool = KeychainWrapper.standard.remove(key: tokenKey)
         log.info("Token was deleted: \(removeSuccessful)")
     }
         

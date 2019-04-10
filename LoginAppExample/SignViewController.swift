@@ -88,13 +88,10 @@ class SignViewController: BaseViewController {
     /// - returns: Bool with information if all fields are valid, and array of invalid fields
     
     fileprivate func validateFields() -> (areValid: Bool, invalidFields: [ValidableTextField]) {
-        emailTextField.validateIfIsNotEmpty()
-        passwordTextField.validateIfIsNotEmpty()
-        
-        let  areValid = emailTextField.valid && passwordTextField.valid
-        
+        var areValid = true
         let invalidFields: [ValidableTextField] = [emailTextField, passwordTextField].compactMap { field in
-            if !(field?.valid)! {
+            if !(field?.isNotEmpty())! {
+                areValid = false
                 return field
             } else {
                 return nil

@@ -11,23 +11,22 @@ import UIKit
 
 ///Text field with validation functions
 class ValidableTextField: UITextField {
-   
-    var valid: Bool = false
     
     // MARK: - Public methods
     
     /// Checks if field is not empty
     
-    func validateIfIsNotEmpty() {
-        valid = true
-        if let empty = self.text?.isEmpty {
-            valid = !empty
+    func isNotEmpty() -> Bool {
+        if (self.text?.isEmpty) != nil && (self.text!.isEmpty) == true {
+           return false
+        } else {
+            return true
         }
     }
     
     /// Checks if String in field is equal to given String
     
-    func validateIfTextEqual(to text: String?) {
-        valid = self.text == text
+    func textIsEqual(to text: String?) -> Bool {
+        return (isNotEmpty() && self.text == text)
     }
 }

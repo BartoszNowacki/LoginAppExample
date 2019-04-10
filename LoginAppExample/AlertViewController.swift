@@ -132,8 +132,7 @@ class AlertViewController: BaseViewController {
             }
             return false
         }
-        repassField.validateIfTextEqual(to: passField.text)
-        guard repassField.valid else {
+        guard repassField.textIsEqual(to: passField.text) else {
             log.info("Passwords are not the same")
             showErrorHUD(with: NSLocalizedString("Login: Passwords match", comment: ""))
             return false
@@ -145,15 +144,10 @@ class AlertViewController: BaseViewController {
     /// - returns: Bool with information if all fields are valid, and array of invalid fields
     
     fileprivate func validateFields() -> (areValid: Bool, invalidFields: [ValidableTextField]) {
-        nameField.validateIfIsNotEmpty()
-        emailField.validateIfIsNotEmpty()
-        passField.validateIfIsNotEmpty()
-        repassField.validateIfIsNotEmpty()
-        
-        let  areValid = nameField.valid && emailField.valid && passField.valid && repassField.valid
-        
+        var  areValid = true
         let invalidFields: [ValidableTextField] = [nameField, emailField, passField, repassField].compactMap { field in
-            if !(field?.valid)! {
+            if !(field?.isNotEmpty())! {
+                areValid = false
                 return field
             } else {
                 return nil
