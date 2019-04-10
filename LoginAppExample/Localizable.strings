@@ -1,0 +1,16 @@
+//
+//  Localizable.strings
+//  Recruit1
+//
+//  Created by Bartosz Nowacki on 14/03/2019.
+//  Copyright © 2019 Appunite. All rights reserved.
+//
+
+//Login
+"Login: Register"    = "Register";
+"Login: Cancel"    = "Cancel";
+"Login: Passwords match"    = "Passwords are not the same";
+
+
+//DetailTableView
+"Log out"    = "Log out";
