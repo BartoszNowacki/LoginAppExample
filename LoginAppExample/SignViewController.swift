@@ -19,7 +19,7 @@ class SignViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if UserManager.shared.isAvailable(RToken.self) {
+        if isUserLogged() {
             self.performSegue(withIdentifier: "show_detail_controller", sender: nil)
         }
     }
@@ -42,7 +42,6 @@ class SignViewController: BaseViewController {
     /// Api call for login
     
     func loginUser(email: String, password: String) {
-        log.info("Register new user")
         let login = Login(email: email, password: password)
         APIClient.shared.makeCall(type: APIType.login, for: login, complete: { response in
             switch response.type {
@@ -53,9 +52,8 @@ class SignViewController: BaseViewController {
                 }
             case .success:
                 if let token = response.content.first as! Token? {
-                    UserManager.shared.save(token.asRealm())
+                    self.saveToken(token.token)
                     self.performSegue(withIdentifier: "show_detail_controller", sender: nil)
-                    log.info("got token")
                 }
                 self.dismissHUD()
             }

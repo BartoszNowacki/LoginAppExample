@@ -21,6 +21,30 @@ class BaseViewController: UIViewController {
         log.info("Save was successful: \(saveSuccessful)")
     }
     
+    func getToken() -> String {
+        let token = KeychainWrapper.standard.string(forKey: tokenKey)
+        if token != nil {
+            return KeychainWrapper.standard.string(forKey: tokenKey)!
+        } else {
+            fatalError()
+        }
+    }
+    
+    func removeUserData() {
+        PokeManager.shared.deleteAll()
+        let removeSuccessful: Bool = KeychainWrapper.standard.remove(key: "myKey")
+        log.info("Token was deleted: \(removeSuccessful)")
+    }
+        
+    func isUserLogged() -> Bool {
+        let token = KeychainWrapper.standard.string(forKey: tokenKey)
+        if token != nil {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     // MARK: - Progress HUD methods
     
     func showErrorHUD(with msg: String?) {

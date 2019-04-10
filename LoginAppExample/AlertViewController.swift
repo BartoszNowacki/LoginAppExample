@@ -99,7 +99,7 @@ class AlertViewController: BaseViewController {
                 }
             case .success:
                 if let token = response.content.first as! Token? {
-                    UserManager.shared.save(token.asRealm())
+                    self.saveToken(token.token)
                     self.dismissHUD()
                     self.dismiss(animated: false, completion: nil)
                     self.delegate?.loggedIn()

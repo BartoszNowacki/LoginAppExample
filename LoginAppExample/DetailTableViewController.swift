@@ -17,7 +17,6 @@ class DetailTableViewController: BaseViewController {
     var pokemons: [Pokemon]? {
         didSet {
             if let pokemons = pokemons, pokemons.count > 0 {
-                log.info("tbdc got here pok rel2")
                 tableView.reloadData()
             }
         }
@@ -40,9 +39,8 @@ class DetailTableViewController: BaseViewController {
     /// Api call for getting pokemons
     
     private func getPokemonsFromApi() {
-        log.info("Get pokemons")
-        if UserManager.shared.isAvailable(RToken.self) {
-            let token = UserManager.shared.current(RToken.self)!.asDomain()
+        if isUserLogged() {
+            let token = Token(token: getToken())
             APIClient.shared.makeCall(type: APIType.pokemon, for: token, complete: { response in
                 switch response.type {
                 case .failure, .serverError:
@@ -66,10 +64,6 @@ class DetailTableViewController: BaseViewController {
     private func getFromRealm() {
         if PokeManager.shared.isAvailable(RPokemon.self) {
             let rPokemons = PokeManager.shared.load() as [RPokemon]
-            log.info("there is pokemons: \(rPokemons)")
-            for poke in rPokemons {
-                log.info("single poke: \(poke)")
-            }
             pokemons = convertPokes(rPokemons: rPokemons)
         } else {
             log.error("There are no pokemons stored in Realm")
@@ -97,8 +91,7 @@ class DetailTableViewController: BaseViewController {
     /// Function for logging out. It is deleting RToken object and dismissing current View Controller
     
     @objc private func logOut() {
-        UserManager.shared.deleteAll()
-        PokeManager.shared.deleteAll()
+        removeUserData()
         dismiss(animated: true, completion: nil)
     }
 }
@@ -117,7 +110,6 @@ class DetailTableViewController: BaseViewController {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        log.info("got here tab1")
         let cell = tableView.dequeueReusableCell(withIdentifier: DetailTableViewCell.reuseIdentifier) as! DetailTableViewCell
         if let pokemon = pokemons?[indexPath.row] {
             cell.nameLabel.text = pokemon.name

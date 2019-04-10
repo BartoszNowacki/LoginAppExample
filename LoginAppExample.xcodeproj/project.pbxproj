@@ -16,8 +16,6 @@
 		5B076BCA223A6D6E00530E26 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B076BC9223A6D6E00530E26 /* Token.swift */; };
 		5B076BCD223A741300530E26 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B076BCC223A741300530E26 /* APIClient.swift */; };
 		5B076BCF223A742200530E26 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B076BCE223A742200530E26 /* APIResponse.swift */; };
-		5B076BD7223AF1C800530E26 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B076BD6223AF1C800530E26 /* UserManager.swift */; };
-		5B076BD9223AF27400530E26 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B076BD8223AF27400530E26 /* UserData.swift */; };
 		5B076BDC223AFE4800530E26 /* ValidableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B076BDB223AFE4800530E26 /* ValidableTextField.swift */; };
 		5B076BDE223B036C00530E26 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B076BDD223B036C00530E26 /* Extensions.swift */; };
 		5B319EEC225BAFF900C6EE40 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B319EEB225BAFF900C6EE40 /* Connectivity.swift */; };
@@ -27,7 +25,6 @@
 		5B9A1167225C9667009A3AF6 /* PokeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A1166225C9667009A3AF6 /* PokeData.swift */; };
 		5B9A1169225C96D9009A3AF6 /* PokeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A1168225C96D9009A3AF6 /* PokeManager.swift */; };
 		5B9A116B225DD9C5009A3AF6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5B9A116A225DD9C5009A3AF6 /* README.md */; };
-		5BB568BD223BA22F00A60AC4 /* RToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB568BC223BA22F00A60AC4 /* RToken.swift */; };
 		5BB568BF223BA4DC00A60AC4 /* ConvertionProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB568BE223BA4DC00A60AC4 /* ConvertionProtocols.swift */; };
 		5BB568C1223BA7D200A60AC4 /* ObjectRealmExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB568C0223BA7D200A60AC4 /* ObjectRealmExt.swift */; };
 		5BB568C3223BB0B700A60AC4 /* AlertView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB568C2223BB0B700A60AC4 /* AlertView.storyboard */; };
@@ -54,8 +51,6 @@
 		5B076BC9223A6D6E00530E26 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		5B076BCC223A741300530E26 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		5B076BCE223A742200530E26 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
-		5B076BD6223AF1C800530E26 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
-		5B076BD8223AF27400530E26 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		5B076BDB223AFE4800530E26 /* ValidableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidableTextField.swift; sourceTree = "<group>"; };
 		5B076BDD223B036C00530E26 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5B319EEB225BAFF900C6EE40 /* Connectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
@@ -65,7 +60,6 @@
 		5B9A1166225C9667009A3AF6 /* PokeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeData.swift; sourceTree = "<group>"; };
 		5B9A1168225C96D9009A3AF6 /* PokeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeManager.swift; sourceTree = "<group>"; };
 		5B9A116A225DD9C5009A3AF6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		5BB568BC223BA22F00A60AC4 /* RToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RToken.swift; sourceTree = "<group>"; };
 		5BB568BE223BA4DC00A60AC4 /* ConvertionProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertionProtocols.swift; sourceTree = "<group>"; };
 		5BB568C0223BA7D200A60AC4 /* ObjectRealmExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectRealmExt.swift; sourceTree = "<group>"; };
 		5BB568C2223BB0B700A60AC4 /* AlertView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AlertView.storyboard; sourceTree = "<group>"; };
@@ -143,7 +137,6 @@
 		5B076BD0223AA0C200530E26 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				5B076BD6223AF1C800530E26 /* UserManager.swift */,
 				5B9A1168225C96D9009A3AF6 /* PokeManager.swift */,
 			);
 			path = Manager;
@@ -193,9 +186,7 @@
 		5BB568BB223BA21400A60AC4 /* RealmModel */ = {
 			isa = PBXGroup;
 			children = (
-				5B076BD8223AF27400530E26 /* UserData.swift */,
 				5BB568BE223BA4DC00A60AC4 /* ConvertionProtocols.swift */,
-				5BB568BC223BA22F00A60AC4 /* RToken.swift */,
 				5B319EED225BB07000C6EE40 /* RPokemon.swift */,
 				5B9A1166225C9667009A3AF6 /* PokeData.swift */,
 			);
@@ -425,19 +416,16 @@
 				5B04E12622464DF700B3C551 /* OutputModel.swift in Sources */,
 				5B076BCF223A742200530E26 /* APIResponse.swift in Sources */,
 				5BB568BF223BA4DC00A60AC4 /* ConvertionProtocols.swift in Sources */,
-				5B076BD9223AF27400530E26 /* UserData.swift in Sources */,
 				AD65311920A5DECF00AF39D2 /* DetailTableViewController.swift in Sources */,
 				5B076BC6223A6AE300530E26 /* User.swift in Sources */,
 				5BB568C1223BA7D200A60AC4 /* ObjectRealmExt.swift in Sources */,
 				5B06EF8F224A37E600FDDB27 /* Login.swift in Sources */,
 				5B04E12422464DEB00B3C551 /* Error.swift in Sources */,
 				AEAD1CE61D128F270010C9EC /* SignViewController.swift in Sources */,
-				5B076BD7223AF1C800530E26 /* UserManager.swift in Sources */,
 				5B9A1165225C8955009A3AF6 /* BaseViewController.swift in Sources */,
 				5B319EEC225BAFF900C6EE40 /* Connectivity.swift in Sources */,
 				5B076BDC223AFE4800530E26 /* ValidableTextField.swift in Sources */,
 				AD65311720A5DEAD00AF39D2 /* DetailTableViewCell.swift in Sources */,
-				5BB568BD223BA22F00A60AC4 /* RToken.swift in Sources */,
 				5BB568C5223BB0DE00A60AC4 /* AlertViewController.swift in Sources */,
 				5B076BDE223B036C00530E26 /* Extensions.swift in Sources */,
 				AEAD1CE41D128F270010C9EC /* AppDelegate.swift in Sources */,

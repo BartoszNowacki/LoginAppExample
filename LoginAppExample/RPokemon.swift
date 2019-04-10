@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RealmSwift
 
 class RPokemon: PokeData {
     @objc dynamic var pokeID: Int = 0
