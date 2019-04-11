@@ -25,6 +25,7 @@
 		5B9A1167225C9667009A3AF6 /* PokeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A1166225C9667009A3AF6 /* PokeData.swift */; };
 		5B9A1169225C96D9009A3AF6 /* PokeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A1168225C96D9009A3AF6 /* PokeManager.swift */; };
 		5B9A116B225DD9C5009A3AF6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5B9A116A225DD9C5009A3AF6 /* README.md */; };
+		5B9A116D225E0478009A3AF6 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A116C225E0478009A3AF6 /* UserManager.swift */; };
 		5BB568BF223BA4DC00A60AC4 /* ConvertionProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB568BE223BA4DC00A60AC4 /* ConvertionProtocols.swift */; };
 		5BB568C1223BA7D200A60AC4 /* ObjectRealmExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB568C0223BA7D200A60AC4 /* ObjectRealmExt.swift */; };
 		5BB568C3223BB0B700A60AC4 /* AlertView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB568C2223BB0B700A60AC4 /* AlertView.storyboard */; };
@@ -60,6 +61,7 @@
 		5B9A1166225C9667009A3AF6 /* PokeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeData.swift; sourceTree = "<group>"; };
 		5B9A1168225C96D9009A3AF6 /* PokeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeManager.swift; sourceTree = "<group>"; };
 		5B9A116A225DD9C5009A3AF6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5B9A116C225E0478009A3AF6 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		5BB568BE223BA4DC00A60AC4 /* ConvertionProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertionProtocols.swift; sourceTree = "<group>"; };
 		5BB568C0223BA7D200A60AC4 /* ObjectRealmExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectRealmExt.swift; sourceTree = "<group>"; };
 		5BB568C2223BB0B700A60AC4 /* AlertView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AlertView.storyboard; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				5B9A1168225C96D9009A3AF6 /* PokeManager.swift */,
+				5B9A116C225E0478009A3AF6 /* UserManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				5B319EEC225BAFF900C6EE40 /* Connectivity.swift in Sources */,
 				5B076BDC223AFE4800530E26 /* ValidableTextField.swift in Sources */,
 				AD65311720A5DEAD00AF39D2 /* DetailTableViewCell.swift in Sources */,
+				5B9A116D225E0478009A3AF6 /* UserManager.swift in Sources */,
 				5BB568C5223BB0DE00A60AC4 /* AlertViewController.swift in Sources */,
 				5B076BDE223B036C00530E26 /* Extensions.swift in Sources */,
 				AEAD1CE41D128F270010C9EC /* AppDelegate.swift in Sources */,

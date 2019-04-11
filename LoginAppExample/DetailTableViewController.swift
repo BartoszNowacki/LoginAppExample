@@ -27,11 +27,13 @@ class DetailTableViewController: BaseViewController {
         tableView.delegate = self
         tableView.dataSource = self
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: NSLocalizedString("Log out", comment: "").lowercase, style: .done, target: self, action: #selector(logOut))
-        if Connectivity.isConnectedToInternet {
-            getPokemonsFromApi()
-        } else {
-            getFromRealm()
-        }
+        PokemonProvider.shared.getPokemons()
+//        if Connectivity.isConnectedToInternet {
+//            let data = PokemonProvider.shared.getPokemons()
+//            log.info("tbdc this is data \(data)")
+//        } else {
+//            getFromRealm()
+//        }
     }
     
     // MARK: - Function that will be removed to PokeProvider (check "readme" file)
